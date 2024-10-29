@@ -1,0 +1,665 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: "Noto Sans Georgian", serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+    font-weight: 400; /* Зменшує жирність */
+  }
+  
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Site Layout */
+.site {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Fills the entire screen height */
+}
+
+.site__left-content {
+    flex: 1 1 30%; /* You can adjust the width as needed */
+    display: flex;
+    flex-direction: column;
+    height: 2620px; /* Make it full height */
+}
+
+
+.site__main {
+    flex: 1 1 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.content--additional {
+    padding: 20px;
+    background-color: #f9f9f9; /* Світлий фон для контрасту */
+    border: 1px solid #ddd; /* Легка рамка */
+}
+
+.advertisement {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Легка рамка для рекламних блоків */
+    border-radius: 5px; /* Закруглені кути */
+    background-color: #fff; /* Білий фон для контенту */
+}
+
+.advertisement__link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 10px;
+    background-color: #007bff; /* Синій фон для кнопки */
+    color: #fff; /* Білий текст */
+    text-decoration: none; /* Без підкреслення */
+    border-radius: 4px; /* Закруглені кути кнопки */
+}
+
+.advertisement__link:hover {
+    background-color: #0056b3; /* Темніший синій на ховер */
+}
+
+
+/* Header */
+.header {
+    margin: 30px;
+}
+
+.header__branding__content{
+    display: flex;
+    align-items: center;
+}
+
+.header__branding__content h1{
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Вирівнювання тексту по вертикалі */
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #4B5B56; /* Темно-сірий колір */
+    height: 50px; /* Висота панелі для центрування */
+}
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+.navbar a:hover {
+    color: #f8770d; /* Темніше при наведенні */
+}
+
+.header__branding{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.main-content{
+    flex: 1 1 80%; /* Main content width */
+}
+
+.main-content-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content-text{
+    padding-left: 10px;
+}
+
+.main-content-text h1, h3, p, a{
+    padding: 15px;
+}
+
+.main-content-text{
+    padding-top: 100px;
+    max-width: 400px;
+}
+
+.main-content-text h1{
+    font-size: 40px;
+}
+
+.main-content-img{
+    height: 500px;
+}
+
+
+
+.main-content-text a {
+    display: flex;
+    width: 150px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    background-color: #26534C;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+}
+
+
+.main-content-images{
+    position: relative;
+}
+
+.main-content-img-background{
+    width: 400px;
+    height: 500px;
+    background-color: #ECE8D9;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: -1;
+}
+
+.main-content-img-box{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 350px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тінь */
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.main-content-img-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-img{
+    height: 45px;
+}
+
+.header__title {
+    font-size: 1.5em;
+}
+
+.header__search {
+    padding: 5px;
+    font-size: 1em;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.goods{
+    padding: 40px 20px;
+}
+
+.goods-text{
+    display: flex;
+    justify-content: space-around;
+}
+
+.goods-text-box{
+    position: relative;
+}
+
+.goods-text-box-img{
+    position: absolute;
+    z-index: -1;
+    height: 120px;
+    top: -40px;
+}
+
+.goods-text-box h2{
+    padding: 20px;
+}
+
+.goods-button{
+    display: flex;
+    width: 150px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #1C3F3A;
+    color: #102226;
+    text-decoration: none;
+    margin: 10px;
+}
+
+
+
+.goods-photos {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+    justify-content: center; /* Додаємо вирівнювання по центру */
+}
+
+.product__card {
+    height: 500px;
+    width: 400px;
+    padding-top: 340px;
+    padding-left: 30px;
+}
+
+.product__card h1{
+    color: #F1F3F3;
+}
+
+.product__card p{
+    font-size: 12px;
+    color: #B4BBBD;
+}
+
+.product__card a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #e7d286;  
+}
+
+.card-alms,
+.card-almosty,
+.card-skin-care,
+.card-neauthy {
+    background-size: cover; /* або 'contain', залежно від ефекту */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-alms {
+    background-image: url(../img/card-1.png);
+}
+
+.card-almosty {
+    background-image: url(../img/card-2.png);
+}
+
+.card-skin-care {
+    background-image: url(../img/card-3.png);
+}
+
+.card-neauthy {
+    background-image: url(../img/card-4.png);
+}
+
+.quote{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.quote h1{
+    padding: 40px;
+}
+
+.quote-img{
+    position: absolute;
+    z-index: -1;
+    height: 100px;
+    top: 5px;
+}
+
+
+.content-section{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+.content-section-text h3{
+    font-size: 24px;
+    padding-bottom: 40px;
+}
+
+.content-section-text{
+    padding-top: 40px;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    flex: 1 1 15%; /* Sidebar width */
+    padding: 15px;
+    background-color: #ffffff;
+    min-width: 120px;
+}
+
+/* Sidebar Menu */
+.sidebar__menu {
+    margin-top: 20px;
+}
+
+.sidebar__list {
+    list-style: none;
+}
+
+.sidebar__item {
+    margin: 10px 0;
+}
+
+.sidebar__link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9em; /* Reduced font size */
+    padding: 8px 12px;
+    display: block;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar__link:hover {
+    background-color: #e0dcdc;
+}
+
+
+
+/* Content Blocks */
+.content {
+    border: 1px solid #ddd;
+    padding: 40px;
+    flex: 1 1 70%;
+}
+
+.content--promo {
+    background-color: #ffffff;
+    position: relative;
+    z-index: -2;
+}
+
+.content--promo-img{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+    height: 70px;
+}
+
+.ontent--promo h1{
+    padding: 20px;
+}
+
+
+.process-list {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.process-list dt {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+}
+
+.process-list dd {
+    margin: 5px 0 20px 20px; /* відступ для вирівнювання опису */
+    font-size: 1em;
+    color: #666;
+}
+
+.separator {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0; /* відстань між елементами */
+}
+
+
+
+.content--additional {
+    background-color: #e6f0e6;
+    text-align: center;
+}
+
+.content--main {
+    background-color: #d7f7d9;
+}
+
+/* Footer */
+
+
+.footer {
+    max-width: 1200px;
+    padding: 20px;
+    padding-bottom: 50px;
+    background-color: #f8f8f8; /* Світлий фон */
+    text-align: center; /* Центрування тексту */
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer ul {
+    padding: 20px;
+    list-style: none; /* Вимкнути стандартні маркери списку */
+}
+
+.footer li {
+    display: inline; /* Вирівнює елементи списку в рядок */
+    margin: 0 10px; /* Відступи між елементами списку */
+}
+
+.footer a {
+    text-decoration: none; /* Вимкнути підкреслення */
+    color: #333; /* Колір тексту */
+}
+
+
+
+
+/* Адаптивність для планшетів */
+@media (max-width: 1024px) {
+    .site {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .site__left-content {
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .goods-photos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        order: -1;
+    }
+    .site__left-content{
+        display: none;
+    }
+    .header__branding__content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+/* Адаптивність для мобільних телефонів */
+@media (max-width: 968px) {
+    .site {
+        flex-direction: column;
+        height: auto;
+    }
+
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main-content-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .main-content-text{
+        text-align: center;
+    }
+
+    .main-content-images {
+        flex-direction: column;
+    }
+    .main-content-text a{
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+
+    .header__branding{
+        height: 220px;
+    }
+
+    .main-content-text h1 {
+        font-size: 24px;
+    }
+
+    .goods-photos {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .product__card {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .footer {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+    .content-section{
+        flex-direction: column;
+    }
+    .content-section-text{
+        text-align: center;
+    }
+}
+
+/* Адаптивність для дуже малих екранів */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .main-content-text h1 {
+        font-size: 18px;
+    }
+
+    .main-content-images, .content--promo, .content--additional {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content-text {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .advertisement__link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header__search{
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    .main-content-images{
+        display: none;
+    }
+}
+
+
+
+/* Sidebar Menu Styling */
+.menu-header {
+    background-color: #1C3F3A;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar__list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar__item {
+    border-top: 1px solid #ddd;
+}
+
+.sidebar__item:first-child {
+    border-top: none;
+}
+
+.sidebar__link {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+    position: relative;
+    padding-left: 25px; /* Відступ для стрілочки */
+}
+
+.sidebar__link::before {
+    content: "\2039"; /* Юнікод для "<" */
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    left: 10px; /* Розташування стрілочки ліворуч */
+}
+
+
+.sidebar__link:hover {
+    background-color: #e0dcdc;
+}
+
+
+
+
